@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+{% load static %}
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{{app_title}}</title>
+    <!-- Ext includes -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <link rel="stylesheet" type="text/css" href="{%get_static_prefix%}extjs/resources/css/ext-all.css" />
+        <link rel="stylesheet" type="text/css" href="{%get_static_prefix%}extjs/examples/ux/grid/css/GridFilters.css" />
+        <link rel="stylesheet" type="text/css" href="{%get_static_prefix%}extjs/examples/ux/grid/css/RangeMenu.css" />
+        <script type="text/javascript" src="{%get_static_prefix%}extjs/ext-all.js"></script>
+        <script type="text/javascript">
+            var prefix_path = {%get_static_prefix%}
+        </script>
+		<script type="text/javascript" src="{%get_static_prefix%}Application.js"></script>
+		<script type="text/javascript" src="{%get_static_prefix%}FormExtjs.js"></script>
+        <script type="text/javascript" src="{%get_static_prefix%}extjs/locale/ext-lang-pt_BR.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="toolbar"></div>
+    </div>
+    <a href="http://www.sencha.com" target="_blank" alt="Powered by Ext JS"
+       id="poweredby"><div></div></a>
+</body>
+</html>

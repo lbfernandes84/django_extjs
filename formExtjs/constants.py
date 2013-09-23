@@ -1,0 +1,3 @@
+DATE_FORMAT_FIELD = '%d/%m/%Y'
+DATE_TIME_FORMAT_FIELD = '%d/%m/%Y %H:%M'
+TIME_FORMAT_FIELD = '%H:%M'
