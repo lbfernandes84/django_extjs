@@ -20,6 +20,14 @@ Item_Menu = {
               - url_load_grid: Url para a recuperação dos itens mostrados na tela de listagem\n\
               - url_delete_record: Url para deletar itens da tela de listagem\n\
               - title_window_form: Título da janela de formulário ao adicionar ou editar um item da lista\n",
-              "item_menu2dict": "Retorna um dicionário com atributos necessários para criação de um item de menu. Esse dicionário é serializado e passado ao cliente."
+              "item_menu2dict": "Retorna um dicionário com atributos necessários para criação de um item de menu. Esse dicionário será serializado e passado ao cliente."
              }
+Button = {
+          "doc": "Implementa um botão que será renderizado no cliente nos padrões do Extjs. Recebe como atributos na instanciação os valores:\n\
+              - label: Texto do botão que será utilizado\n\
+              - action: Nome do evento que será disparado a clicarmos no botão\n\
+              - path_image: Caminho relativo da imagem do botão\n\
+              -tootip: Texto de ajuda que será disposto na tela quando o usuário passar o mouse sobre o botão",
+          "get_configurations":"Retorna um dicionário com atributos necessários para criação de um botão. Esse dicionário será serializado e passado ao cliente."
+          }
             
