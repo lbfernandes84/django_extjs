@@ -131,12 +131,12 @@ class Ajax(object):
 
 
 class Configuration_Initial(object):
-    APP_TITLE = 'APP_TITLE' # nome da aplicação que será exibida em todas as telas do extjs
-    APP_VERSION = '0.0.1' # número da verão da aplicaçãoo que será exibida na barra de status da aplicação extjs
+    APP_TITLE = 'APP_TITLE'  # nome da aplicação que será exibida em todas as telas do extjs
+    APP_VERSION = '0.0.1'  # número da verão da aplicaçãoo que será exibida na barra de status da aplicação extjs
     VERSION_LABEL = 'Versão:'
-    BUTON_ADD_LABEL = 'Adicionar' #Label do botão add para ser exibido no extjs
-    BUTTON_ADD_PATH_IMAGE = settings.STATIC_URL + 'imagens/add.png' #Caminho da imagem do botão add, para ser exibida no botão extjs
-    BUTON_ADD_TOOLTIP = '' # mensagem de ajuda para ser exibido no extjs quando parar o mouse em cima do botão
+    BUTON_ADD_LABEL = 'Adicionar'  # Label do botão add para ser exibido no extjs
+    BUTTON_ADD_PATH_IMAGE = settings.STATIC_URL + 'imagens/add.png'  # Caminho da imagem do botão add, para ser exibida no botão extjs
+    BUTON_ADD_TOOLTIP = ''  # mensagem de ajuda para ser exibido no extjs quando parar o mouse em cima do botão
     BUTON_DEL_LABEL = 'Remover'
     BUTTON_DEL_PATH_IMAGE = settings.STATIC_URL + 'imagens/delete.png'
     BUTON_DEL_TOOLTIP = ''
@@ -149,21 +149,21 @@ class Configuration_Initial(object):
     BUTTON_REPORT_LABEL = 'Exportar'
     BUTTON_REPORT_PATH_IMAGE = settings.STATIC_URL + 'imagens/report.png'
     BUTTON_REPORT_TOOLTIP = ''
-    ACTION_DELETE = 'delete_' # nome da ação extjs que será chamada
-    ACTION_DELETE_TITLE = 'Confirmação' #título da tela de messagebox para confirmação de exclusão
-    ACTION_DELETE_MSG = 'Você tem certeza que deseja excluir o registro selecionado?' #Mensagem de confirmação que será exibida no combobox
-    AJAX_FAILURE = 'failure' # nome para toda exceção ajax que ocorrer
-    AJAX_FAILURE_TITLE = 'Erro' # Título do messagebox que será exibido toda vez que ocorrer um erro em uma requisição ajax
-    AJAX_FAILURE_MSG = 'Mensagem' # Mensagem que será exibida no messagebox toda vez que ocorrer um erro em uma requisição ajax
-    ALLOW_REPORTS = False # flag que permite ou nao a criacao de relatorios dinamicos no sistema
-    MENU_REPORT_TITLE = 'Relatórios'#Texto a ser exibido no menu de relatorios da toolbar
-    MENU_REPORT_ACTION = 'report'#nome da ação extjs que será chamada quando usuario clicar no botao
-    MENU_REPORT_URL = '/'#URL que o menu de relatorios irá
-    MENU_EXIT_TITLE = 'Sair'#Texto a ser exibido no menu de saída/logou da toolbar
-    MENU_EXIT_ACTION = 'exit'#nome da ação extjs que será chamada 
-    MENU_EXIT_URL = '/'#URL que o menu de saída irá
-    DELETE_SUCESS_TITLE = 'Exclusão'#Título do messagebox que será exibido após exlcuir o registro
-    DELETE_SUCESS_MSG = 'Registro removido com sucesso.'#Mensagem que será exibida no messagebox após exluir o registro
+    ACTION_DELETE = 'delete_'  # nome da ação extjs que será chamada
+    ACTION_DELETE_TITLE = 'Confirmação'  # título da tela de messagebox para confirmação de exclusão
+    ACTION_DELETE_MSG = 'Você tem certeza que deseja excluir o registro selecionado?'  # Mensagem de confirmação que será exibida no combobox
+    AJAX_FAILURE = 'failure'  # nome para toda exceção ajax que ocorrer
+    AJAX_FAILURE_TITLE = 'Erro'  # Título do messagebox que será exibido toda vez que ocorrer um erro em uma requisição ajax
+    AJAX_FAILURE_MSG = 'Mensagem'  # Mensagem que será exibida no messagebox toda vez que ocorrer um erro em uma requisição ajax
+    ALLOW_REPORTS = False  # flag que permite ou nao a criacao de relatorios dinamicos no sistema
+    MENU_REPORT_TITLE = 'Relatórios'  # Texto a ser exibido no menu de relatorios da toolbar
+    MENU_REPORT_ACTION = 'report'  # nome da ação extjs que será chamada quando usuario clicar no botao
+    MENU_REPORT_URL = '/'  # URL que o menu de relatorios irá
+    MENU_EXIT_TITLE = 'Sair'  # Texto a ser exibido no menu de saída/logou da toolbar
+    MENU_EXIT_ACTION = 'exit'  # nome da ação extjs que será chamada 
+    MENU_EXIT_URL = '/'  # URL que o menu de saída irá
+    DELETE_SUCESS_TITLE = 'Exclusão'  # Título do messagebox que será exibido após exlcuir o registro
+    DELETE_SUCESS_MSG = 'Registro removido com sucesso.'  # Mensagem que será exibida no messagebox após exluir o registro
     DELETE_EXCEPT_PROTECTED_ERROR_MSG = u'O registro não pode ser removido, pois ele é referencia direta para [%s] de %s, remova primeiro esses registros.'
 
     def __init__(self, menus=[]):
@@ -178,15 +178,17 @@ class Configuration_Initial(object):
             button_add = Button('add', self.BUTON_ADD_LABEL, self.BUTTON_ADD_PATH_IMAGE, self.BUTON_ADD_TOOLTIP)
             button_del = Button('del', self.BUTON_DEL_LABEL, self.BUTTON_DEL_PATH_IMAGE, self.BUTON_DEL_TOOLTIP)
             button_save = Button('save', self.BUTON_SAVE_LABEL, self.BUTTON_SAVE_PATH_IMAGE, self.BUTON_SAVE_TOOLTIP)
-            #button_login = Button('login', self.BUTON_LOGIN_LABEL, self.BUTTON_LOGIN_PATH_IMAGE, self.BUTON_LOGIN_TOOLTIP)
+            # button_login = Button('login', self.BUTON_LOGIN_LABEL, self.BUTTON_LOGIN_PATH_IMAGE, self.BUTON_LOGIN_TOOLTIP)
             button_cancel = Button('cancel', self.BUTON_CANCEL_LABEL, self.BUTTON_CANCEL_PATH_IMAGE, self.BUTON_CANCEL_TOOLTIP)
             button_report = Button('report', self.BUTTON_REPORT_LABEL, self.BUTTON_REPORT_PATH_IMAGE, self.BUTTON_REPORT_TOOLTIP)
-            buttons = {button_add.action :button_add.get_configurations(),
+            buttons = {
+                    button_add.action :button_add.get_configurations(),
                     button_del.action :button_del.get_configurations(),
                     button_save.action :button_save.get_configurations(),
-                    #button_login.action :button_login.get_configurations(),
+                    # button_login.action :button_login.get_configurations(),
                     button_cancel.action :button_cancel.get_configurations(),
-                    button_report.action: button_report.get_configurations()}
+                    button_report.action: button_report.get_configurations()
+                    }
             action_delete = Action(self.ACTION_DELETE, self.ACTION_DELETE_TITLE, self.ACTION_DELETE_MSG)
             actions = {action_delete.action:action_delete.get_configurations()}
             ajax = Ajax(self.AJAX_FAILURE, self.AJAX_FAILURE_TITLE, self.AJAX_FAILURE_MSG)

@@ -22,12 +22,23 @@ Item_Menu = {
               - title_window_form: Título da janela de formulário ao adicionar ou editar um item da lista\n",
               "item_menu2dict": "Retorna um dicionário com atributos necessários para criação de um item de menu. Esse dicionário será serializado e passado ao cliente."
              }
+Menu = {}
+
 Button = {
           "doc": "Implementa um botão que será renderizado no cliente nos padrões do Extjs. Recebe como atributos na instanciação os valores:\n\
               - label: Texto do botão que será utilizado\n\
               - action: Nome do evento que será disparado a clicarmos no botão\n\
               - path_image: Caminho relativo da imagem do botão\n\
-              -tootip: Texto de ajuda que será disposto na tela quando o usuário passar o mouse sobre o botão",
+              - tootip: Texto de ajuda que será disposto na tela quando o usuário passar o mouse sobre o botão",
           "get_configurations":"Retorna um dicionário com atributos necessários para criação de um botão. Esse dicionário será serializado e passado ao cliente."
           }
+
+Ajax = "Define as mensagens de falha e sucesso para requisições ajax no cliente"
+
+Configuration_Initial = {
+                         'doc': "Principal classe desse módulo, é responsável por encapsular todas as configurações, menus, botões, mensagens, imagens e urls para serem renderizadas para o cliente.\
+                          são definidas como atributos nessa classe todos as configurações necessárias para um CRUD simples. Diferente das outras classes de configuração, esses atributos são definidos como atributos de classe\
+                          e não de objetos.Na instanciação recebe uma lista com os objetos de menus que serão renderizados ao cliente"
+                          "configuration_Initial2dict":"Transforma todos os componentes em objetos serializáveis para serem enviados ao cliente"
+                         }
             
