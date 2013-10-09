@@ -38,7 +38,7 @@ Ajax = "Define as mensagens de falha e sucesso para requisições ajax no client
 Configuration_Initial = {
                          'doc': "Principal classe desse módulo, é responsável por encapsular todas as configurações, menus, botões, mensagens, imagens e urls para serem renderizadas para o cliente.\
                           são definidas como atributos nessa classe todos as configurações necessárias para um CRUD simples. Diferente das outras classes de configuração, esses atributos são definidos como atributos de classe\
-                          e não de objetos.Na instanciação recebe uma lista com os objetos de menus que serão renderizados ao cliente"
+                          e não de objetos.Na instanciação recebe uma lista com os objetos de menus que serão renderizados ao cliente",
                           "configuration_Initial2dict":"Transforma todos os componentes em objetos serializáveis para serem enviados ao cliente"
                          }
             
