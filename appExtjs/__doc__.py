@@ -22,7 +22,9 @@ Item_Menu = {
               - title_window_form: Título da janela de formulário ao adicionar ou editar um item da lista\n",
               "item_menu2dict": "Retorna um dicionário com atributos necessários para criação de um item de menu. Esse dicionário será serializado e passado ao cliente."
              }
-Menu = {}
+Menu = {
+        'doc':"Classe criada  para receber uma lista de objetos da classe Item_menu e renderizar ao cliente"
+        }
 
 Button = {
           "doc": "Implementa um botão que será renderizado no cliente nos padrões do Extjs. Recebe como atributos na instanciação os valores:\n\
@@ -37,8 +39,13 @@ Ajax = "Define as mensagens de falha e sucesso para requisições ajax no client
 
 Configuration_Initial = {
                          'doc': "Principal classe desse módulo, é responsável por encapsular todas as configurações, menus, botões, mensagens, imagens e urls para serem renderizadas para o cliente.\
-                          são definidas como atributos nessa classe todos as configurações necessárias para um CRUD simples. Diferente das outras classes de configuração, esses atributos são definidos como atributos de classe\
-                          e não de objetos.Na instanciação recebe uma lista com os objetos de menus que serão renderizados ao cliente",
+                          são definidas como atributos nessa classe todos as configurações necessárias para um CRUD simples. Diferente das outras classes de configuração, esses atributos são definidos como atributos da classe\
+                          e não dos objetos.Na instanciação recebe uma lista com os objetos de menus que serão renderizados ao cliente",
                           "configuration_Initial2dict":"Transforma todos os componentes em objetos serializáveis para serem enviados ao cliente"
                          }
+# Documentação das views
+main = "Principal view dessa aplicação, possui um parâmetro opcional de um objeto Configuration_Initial, caso não seja passado, cria-se um objeto com configurações básicas e renderiza a aplicação para o cliente"
+get_configurations_initial = "View responsável por \"subir\" a aplicação completa para o cliente transformando objetos Configuration_Initial em JSON para serem renderizados no cliente, é chamada na view main"
+get_columns = "Responsável por criar objetos para representar as colunas de um modelo em uma tela de listagem no cliente, nessa view é usado um objeto de uma classe da aplicação gridExtjs que retorna objetos json \
+de acordo com o tipo do campo do modelo passado na view, esses objetos entre vários outros fatores, definem como aquele campo será filtrado no grid"
             
